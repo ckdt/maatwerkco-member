@@ -1,0 +1,79 @@
+.c-results {
+  @include grid-container;
+
+  &__content {
+    @media (min-width: $breakpoint-30) {
+      @include grid(36, 1, 0);
+    }
+  }
+
+  &__footer {
+    @include grid-container;
+    clear: both;
+
+    margin-bottom: $spacing;
+    width: 100%;
+
+    @media (min-width: $breakpoint-20) {
+      display: flex;
+    }
+
+    &__dropdown {
+      margin-bottom: $spacing;
+
+      @media (min-width: $breakpoint-20) {
+        flex: 0 0 30%;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__header {
+    margin-bottom: $spacing;
+
+    @media (min-width: $breakpoint-30) {
+      @include grid(48, 13, 0);
+    }
+
+    @media (min-width: $breakpoint-20) {
+      display: flex;
+    }
+
+    &__title {
+
+      @media (min-width: $breakpoint-20) {
+        flex: 0 0 70%;
+        margin-bottom: 0;
+        position: relative;
+        top: 5px;
+      }
+    }
+
+    &__dropdown {
+
+      @media (min-width: $breakpoint-20) {
+        flex: 0 0 30%;
+        margin-bottom: 0;
+        position: relative;
+      }
+    }
+  }
+
+  &__footer {
+
+    &__pagination {
+
+      @media (min-width: $breakpoint-20) {
+        flex: 0 0 70%;
+        justify-content: flex-end;
+      }
+    }
+
+    .c-pagination {
+
+      @media (min-width: $breakpoint-20) {
+        float: right;
+      }
+    }
+  }
+}

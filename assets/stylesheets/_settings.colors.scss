@@ -1,0 +1,70 @@
+/*------------------------------------*\
+  #SETTINGS-COLORS
+\*------------------------------------*/
+
+/*
+ * Most of the variables are based on some kind of percentages to maintain stability and consistency.
+ * So $variable-10 is small or light and $variable-100 is big or dark.
+ */
+
+
+/*
+ * Primary colors
+ */
+$color-primary-10: #FFF5F2;
+$color-primary-30: #FFDED3;
+$color-primary-50: #F47860; // Default
+$color-primary-70: #F47860;
+
+/*
+ * Secondary colors
+ */
+
+$color-secondary-10: #DAD6FD; 
+$color-secondary-30: #8F88D8;
+$color-secondary-50: #2C19A6; // Default
+$color-secondary-60: #3B2DB2;
+$color-secondary-70: #18124F;
+$color-secondary-90: #120d3a;
+
+
+/*
+ * Success and positive colors
+ */
+$color-success-50: #9bcb19; // Default
+$color-success-70: darken(#9bcb19, 10%);
+
+
+/*
+ * Alert en negative colors
+ */
+$color-alert-50: #ff3c00; // Default
+$color-alert-70: darken(#ff3c00, 10%);
+
+$color-warning-50: #ff7200;
+
+/*
+ * Neutral colors
+ */
+
+$color-neutral-10: #F1F1F1;
+$color-neutral-20: #DEDEDE;
+$color-neutral-30: #BDBDBD;
+$color-neutral-40: #959595;
+$color-neutral-50: #7D7E80;
+$color-neutral-70: #3C424D;
+$color-neutral-90: #00091A;
+
+/*
+ * Black and white
+ */
+$color-black: #12100E;
+$color-white: #fff;
+
+
+/*
+ * Social
+ */
+$color-twitter: #1da1f2;
+$color-google: #dd4b39;
+$color-facebook: #3a5795;

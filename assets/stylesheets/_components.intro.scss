@@ -1,0 +1,65 @@
+.c-intro {
+  $size: 450px;
+
+  min-height: $size/2;
+
+  margin-bottom: $spacing;
+
+  @media (min-width: $breakpoint-20) {
+    padding-right: $spacing*4;
+  }
+
+  @media (min-width: $breakpoint-40) {
+    min-height: 380px;
+    max-width: $size;
+    padding-right: 0;
+    margin-bottom: $spacing*2;
+  }
+
+  &__logo {
+    width: 160px;
+    height: 49px;
+    fill: $color-secondary-50;
+    margin-bottom: $spacing;
+  }
+
+  &__image {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    display: none;
+    margin: 0 0 $spacing 0;
+    margin: 0;
+    max-height: $size/2;
+    max-width: $size/2;
+    width: 100%;
+    z-index: $z-index-30;
+
+    @media (min-width: $breakpoint-10) {
+      position: absolute;
+      right: $spacing*2;
+      bottom: $spacing/3;
+    }
+
+    @media (min-width: $breakpoint-20) {
+      bottom: $spacing;
+      display: inline-block;
+      max-height: $size/1.5;
+      max-width: $size/1.5;
+      right: $spacing*2;
+    }
+
+    @media (min-width: $breakpoint-30) {
+      bottom: $spacing*1.8;
+      max-height: $size;
+      max-width: $size;
+      right: $spacing*2;
+    }
+  
+    img {
+      display: block;
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+}

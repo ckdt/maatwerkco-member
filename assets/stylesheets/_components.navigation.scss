@@ -1,0 +1,113 @@
+$block: 'c-navigation';
+.#{$block} {
+  $size: 64px;
+
+  &__user {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    min-height: $size+20;
+    padding: 0 $size+20 0 0;
+    position: relative;
+
+    @media (min-width: $breakpoint-40) {
+      float: right;
+    }
+
+    &__name {
+      margin: 0;
+    }
+
+    &__logo {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 80%;
+      border-radius: $border-radius-20;
+      border: 1px solid $color-neutral-30;
+      display: inline-block;
+      height: $size;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      width: $size;
+    }
+  }
+
+  &__current {
+    display: inline-block;
+    margin-bottom: 0;
+    position: relative;
+    top: 2px;
+  }
+
+  &__settings {
+    display: flex;
+    justify-content: flex-end;
+    font-family: $font-family-heading;
+    list-style: none;
+    position: relative;
+    text-align: right;
+    height: 100%;
+
+    &__item {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      margin-left: $spacing;
+      vertical-align: middle;
+    }
+
+    &__button {
+      position: relative;
+      font-family: $font-family-heading;
+      border-radius: $border-radius-20;
+      border: 1px solid $color-secondary-70;
+      color: $color-secondary-70;
+      font-size: $font-size-30;
+      padding: $spacing/4;
+
+      &:hover {
+        color: $color-black;
+      }
+
+      &--has-icon {
+        padding-left: 30px;
+      }
+
+      &__icon {
+        position: absolute;
+        left: $spacing/3;
+        top: calc(50% - 9px);
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: $spacing*2;
+    max-height: 100%;
+    
+    &__item {
+      display: block;
+    }
+
+    &__link {
+      color: $color-neutral-10;
+      font-size: $font-size-50;
+      display: block;
+      line-height: 1;
+      padding: $spacing/4*3 $spacing;
+      transition: $timing-20 $bezier-a;
+
+      &:hover {
+        color: $color-white;
+        background: rgba($color-white, 0.1);
+      }
+
+      .#{$block}__list__item--selected & {
+        background: $color-secondary-50;
+      }
+    }
+  }
+}

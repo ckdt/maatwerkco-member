@@ -1,0 +1,195 @@
+@font-face {
+  font-family: 'Buenos Aires';
+  src: url('../fonts/BuenosAires-Light.eot');
+  src: url('../fonts/BuenosAires-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BuenosAires-Light.woff') format('woff'),
+    url('../fonts/BuenosAires-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Buenos Aires';
+  src: url('../fonts/BuenosAires-Regular.eot');
+  src: url('../fonts/BuenosAires-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BuenosAires-Regular.woff') format('woff'),
+    url('../fonts/BuenosAires-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Buenos Aires';
+  src: url('../fonts/BuenosAires-Bold.eot');
+  src: url('../fonts/BuenosAires-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BuenosAires-Bold.woff') format('woff'),
+    url('../fonts/BuenosAires-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Pressura';
+  src: url('../fonts/GT-Pressura-Light.eot');
+  src: url('../fonts/GT-Pressura-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GT-Pressura-Light.woff') format('woff'),
+    url('../fonts/GT-Pressura-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GT Pressura';
+  src: url('../fonts/GT-Pressura-Regular.eot');
+  src: url('../fonts/GT-Pressura-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GT-Pressura-Regular.woff') format('woff'),
+    url('../fonts/GT-Pressura-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*------------------------------------*\
+  #BASE-TYPE
+\*------------------------------------*/
+
+/*
+ * Headings
+ */
+h1, h2, legend, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 0.75rem 0;
+}
+
+legend {
+  font-weight: normal;
+
+  &.has-indent {
+    padding: $spacing 0 1.25rem 0;
+    width: 101%;
+    background: $color-white;
+    margin: -2px -1px 0 -1px;
+
+    &:before {
+
+    }
+  }
+
+  &.has-border {
+    border-bottom: 1px solid $color-neutral-30;
+    display: block;
+    width: 100%;
+    padding-bottom: $spacing/2;
+  }
+}
+
+h1,
+.is-h1 { font-size: 2rem; }
+
+h2,
+.is-h2,
+legend {
+  font-size: $font-size-50;
+}
+
+h3,
+.is-h3 { font-size: 1.25rem; }
+
+h4,
+.is-h4 { font-size: 1.2rem; }
+
+h5,
+.is-h5 { font-size: 1.125rem; }
+
+h6,
+.is-h6 { font-size: 1rem; }
+
+
+/*
+ * Paragraphs
+ */
+p {
+  margin: 0 auto $spacing auto;
+  line-height: 1.6;
+
+  &.is-lead {
+    font-size: $font-size-50;
+    font-weight: 600;
+    margin-bottom: $spacing*2;
+  }
+
+  &.is-light { color: $color-white; }
+
+}
+
+
+/*
+ * Links
+ */
+a {
+  color: $color-primary-50;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover { color: $color-primary-70; }
+}
+
+
+/*
+ * Other
+ */
+small {
+  color: $color-neutral-50;
+  font-size: $font-size-20;
+}
+
+em { font-style: italic; }
+
+strong { font-weight: bold; }
+
+code, pre { font-family: 'courier new', monospace; }
+
+pre { overflow-x: auto; }
+
+abbr { border-bottom: 1px dotted $color-neutral-50; }
+
+del { text-decoration: line-through; }
+
+mark { background-color: lighten(yellow, 35%); }
+
+hr {
+  background-color: transparent;
+  border: solid $color-neutral-30;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 2.5rem $spacing;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+
+dl {
+  @include grid-container;
+  margin-bottom: $spacing;
+  font-size: $font-size-20;
+
+  dt {
+    font-weight: bold;
+    clear: left;
+
+    
+  }
+
+  dd {
+    margin-bottom: 5px;
+
+  }
+}

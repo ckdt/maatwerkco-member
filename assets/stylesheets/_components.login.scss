@@ -1,0 +1,69 @@
+$block: 'c-login';
+.#{$block} {
+  @include grid-container;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &__vertical-align {
+    height: 100%;
+    overflow: auto;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+  }
+
+  &__intro {
+    color: $color-secondary-50;
+    font-size: $font-size-30;
+    margin-bottom: $spacing*2;
+
+    &__title {
+      color: $color-secondary-50;
+    }
+  }
+
+  &__explanation {
+    color: $color-secondary-70;
+    font-family: $font-family-serif;
+    font-size: $font-size-20;
+  }
+
+  &__header {
+    background: $color-white;
+    text-align: center;
+    padding: $spacing $spacing $spacing/4 $spacing;
+    border-bottom: 1px solid $color-neutral-10;
+  }
+
+  &__body {
+    @include grid-container;
+    
+    display: inline-block;
+    max-width: 400px;
+    text-align: left;
+    margin-bottom: $spacing;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: $border-radius-10;
+  }
+
+  &__button {
+    display: block;
+  }
+
+  &__login-links {
+    display: block;
+    text-align: center;
+    margin: $spacing/2 0 $spacing*2 0;
+    font-size: $font-size-30;
+  }
+}

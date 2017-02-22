@@ -1,0 +1,17 @@
+$block: 'c-footer';
+.#{$block} {
+  @include grid-container;
+  position: relative;
+
+  &__list {
+    display: block;
+
+    &__item {
+      
+    }
+
+    &__link {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+$block: 'c-cards-grid';
+.#{$block} {
+  list-style: none;
+  margin: 0 0 0 0;
+
+  @media (min-width: $breakpoint-10) {
+    @include grid(48, -0.7);
+  }
+
+  &__item {
+
+    @media (min-width: $breakpoint-10) {
+      @include grid(24, 0.7);
+
+      &:nth-child(2n+1) {
+          clear: left;
+      }
+    }
+
+    @media (min-width: $breakpoint-20) {
+      @include grid(16, 0.7);
+
+      &:nth-child(2n+1) {
+          clear: none;
+      }
+
+      &:nth-child(3n+1) {
+          clear: left;
+      }
+    }
+  }
+}

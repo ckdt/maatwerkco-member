@@ -1,0 +1,20 @@
+/*------------------------------------*\
+  #LAYOUT-CONTAINERS
+\*------------------------------------*/
+
+/*
+ * Build up your container to get your website centered
+ */
+.l-container {
+  @include grid-container;
+  margin: 0 auto;
+  max-width: $max-width;
+  position: relative;
+  width: 100%;
+}
+
+.l-container--full-width {
+  max-width: none;
+  margin: 0;
+}
+

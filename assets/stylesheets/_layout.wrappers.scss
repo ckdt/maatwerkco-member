@@ -1,0 +1,70 @@
+/*------------------------------------*\
+  #LAYOUT-WRAPPERS
+\*------------------------------------*/
+
+/*
+ * Get full width backgrounds around your content
+ */
+.l-wrapper {
+  position: relative;
+  z-index: $z-index-20;
+  backface-visibility: hidden;
+
+  &--has-skew {
+    // overflow: hidden;
+  }
+
+
+  &--has-animation {
+    opacity: 0;
+    animation: wrapper-animation 1s 0s ease forwards;
+  }
+
+  &--neutral {
+    background: $color-neutral-10;
+  }
+
+  &--dark {
+    background: $color-black;
+    color: $color-neutral-10;
+  }
+
+  &--pattern {
+    background: url(../images/pattern.svg);
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+/*
+ * Options to change the layout of the wrapper
+ */
+.l-wrapper--full-height {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  min-height: 80vmin;
+}
+
+
+/*
+ * Set up different backgrounds
+ */
+.l-wrapper--image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes wrapper-animation {
+  0%   {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}

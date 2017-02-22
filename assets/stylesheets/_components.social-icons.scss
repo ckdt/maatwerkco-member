@@ -1,0 +1,58 @@
+$block: 'c-social-icons';
+.#{$block} {
+  @include grid-container;
+  list-style: none;
+  clear: both;
+  padding-top: $spacing;
+  border-top: 1px solid $color-neutral-30;
+  margin-bottom: $spacing;
+
+  &__item {
+    display: inline-block;
+    margin-left: $spacing/2;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    $size: 48px;
+
+    border-radius: $border-radius-20;
+    height: $size;
+    width: $size;
+    display: block;
+    text-align: center;
+    transform: translate3d(0, 0, 0);
+    transition: $timing-10 $bezier-a;
+
+    &--twitter {
+      background: $color-twitter;
+    }
+
+    &--facebook {
+      background: $color-facebook;
+    }
+
+    &--google {
+      background: $color-google;
+    }
+
+    &--instagram {
+      background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+    }
+
+    &:hover {
+      border-color: $color-neutral-50;
+      transform: translate3d(0, -2px, 0);
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    fill: $color-white;
+    position: relative;
+    top: 12px;
+  }
+}

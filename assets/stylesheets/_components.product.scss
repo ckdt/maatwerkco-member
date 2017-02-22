@@ -1,0 +1,98 @@
+.c-product {
+  @extend %c-panel;
+  position: relative;
+  padding: 0 0 0 400px;
+  width: 100%;
+  padding: $spacing $spacing;
+  margin-bottom: $spacing;
+
+  @media (min-width: $breakpoint-20) {
+    padding: $spacing*2 $spacing $spacing 160px;
+  }
+
+  @media (min-width: $breakpoint-40) {
+    padding: $spacing*2 240px $spacing 240px;
+  }
+
+  &__content {
+    @media (min-width: $breakpoint-30) {
+      @include grid(36, 1, 0);
+    }
+  }
+
+  &__specs {
+    display: flex;
+    list-style: none;
+    margin-bottom: $spacing;
+
+    &__item {
+      flex: 1;
+    }
+
+    &__item {
+      flex: 1;
+      font-size: $font-size-40;
+      font-weight: bold;
+
+      &__description {
+        color: $color-neutral-40;
+        display: block;
+        font-size: $font-size-20;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__figure {
+    margin: auto;
+
+    @media (min-width: $breakpoint-20) {
+      position: absolute;
+      top: $spacing;
+      left: $spacing;
+      margin: 0;
+      max-width: 120px;
+    }
+
+    @media (min-width: $breakpoint-40) {
+      max-width: 160px;
+      top: $spacing*2;
+      left: $spacing*2;
+    }
+
+    img {
+      margin-bottom: $spacing/2;
+
+      @media (min-width: $breakpoint-20) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__summary {
+    font-size: $font-size-30;
+
+    @media (min-width: $breakpoint-20) {
+      font-size: $font-size-40;
+    }
+  }
+
+  &__cta {
+    margin-bottom: $spacing;
+
+    @media (min-width: $breakpoint-40) {
+      position: absolute;
+      top: $spacing*2;
+      top: calc( 50% - 80px);
+      right: $spacing*2;
+    }
+
+    &--relative {
+      left: 0;
+      top: 0;
+      text-align: center;
+      position: relative;
+    }
+  }
+}
+

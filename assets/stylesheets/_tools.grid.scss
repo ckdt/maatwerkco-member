@@ -1,0 +1,40 @@
+/*------------------------------------*\
+  #TOOLS-GRID
+\*------------------------------------*/
+/*
+ * The grid-container mixin is necessary for the floats
+ */
+@mixin grid-container() {
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after { clear: both; }
+}
+
+
+// Layout Mixin
+@mixin layout ($var) {
+  $padding-x: map-get($var, padding-x);
+  $padding-y: map-get($var, padding-y);
+  $padding-outer-x: map-get($var, padding-outer-x);
+  $padding-outer-y: map-get($var, padding-outer-y);
+
+  .l-container {
+    padding: $padding-outer-y $padding-outer-x;
+
+    &--small-spacing {
+      padding-top: $spacing/4;
+      padding-bottom: $spacing/2;
+    }
+  }
+
+  .l-element {
+    padding: ($padding-y / 2) ($padding-x / 2);
+    min-height: 1px;
+    width: 100%;
+  }
+}

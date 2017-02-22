@@ -1,0 +1,11 @@
+.c-header {
+  border-bottom: 1px solid $color-neutral-20;
+  background: $color-neutral-10;
+ //box-shadow: 0 1px 3px rgba($color-black, 0.2);
+  position: relative;
+
+  &--no-styles {
+    background: none;
+    border-bottom: 0;
+  }
+}

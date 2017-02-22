@@ -1,0 +1,115 @@
+$block: 'c-tabs';
+.#{$block} {
+  border: 1px solid $color-neutral-30;
+  border-bottom: 0;
+  display: block;
+  list-style: none;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+
+  @media (min-width: $breakpoint-20) {
+    display: flex;
+    text-align: left;
+  }
+
+  &__item {
+    color: $color-neutral-70;
+    counter-increment: list__counter;
+    display: block;
+    position: relative;
+
+    border-bottom: 1px solid $color-neutral-30;
+
+    @media (min-width: $breakpoint-20) {
+      border-left: 1px solid $color-neutral-30;
+    }
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &:before {
+      border-radius: 100%;
+      border: 2px solid $color-neutral-70;
+      color: $color-neutral-70;
+      content: counter(list__counter);
+      font-weight: bold;
+      font-size: $font-size-30;
+      height: 24px;
+      left: $spacing;
+      line-height: 19px;
+      position: absolute;
+      text-align: center;
+      top: 7px;
+      width: 24px;
+
+      @media (min-width: $breakpoint-20) {
+        top: 16px;
+      }
+    }
+
+    &--selected {
+      background: $color-white;
+
+      @media (min-width: $breakpoint-20) {
+        border-bottom-color: $color-white;
+      }
+
+      &:before {
+        background: $color-black;
+        color: $color-white
+      }
+    }
+
+    @media (min-width: $breakpoint-20) {
+      flex: 1;
+    }
+  }
+
+  &__link {
+    background: $color-neutral-5;
+    color: $color-neutral-50;
+    display: block;
+    font-size: $font-size-30;
+    font-weight: bold;
+    line-height: 1;
+    min-height: 40px;
+    font-family: $font-family-heading;
+    padding: $spacing/2 $spacing $spacing/2 $spacing*2.5;
+
+    @media (min-width: $breakpoint-20) {
+      font-size: $font-size-40;
+      padding: $spacing $spacing $spacing $spacing*3;
+    }
+
+    &:hover,
+    .#{$block}__item--selected & {
+      background: $color-white;
+      color: $color-neutral-70;
+    }
+  }
+
+  &__icon {
+    fill: $color-primary-50;
+    position: absolute;
+    top: -3px;
+    left: 0;
+  }
+
+  &__content {
+    @include grid-container;
+    padding: $spacing $spacing 0 $spacing;
+
+    @media (min-width: $breakpoint-20) {
+      padding: $spacing*2 $spacing*2 $spacing*2 $spacing*2;
+    }
+  }
+
+  &__body {
+    @include grid-container;
+    background: $color-white;
+    border: 1px solid $color-neutral-30;
+    border-top: 0;
+  }
+}

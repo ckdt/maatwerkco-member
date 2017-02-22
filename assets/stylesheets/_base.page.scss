@@ -1,0 +1,40 @@
+/*------------------------------------*\
+  #BASE-PAGE
+\*------------------------------------*/
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  background: $color-neutral-10;
+  color: $color-neutral-70;
+  font: 400 $font-size-base $font-family-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+
+  &.has-sidebar {
+
+    @media (min-width: $breakpoint-30) {
+      padding-left: $sidebar;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+/*------------------------------------*\
+  #OBJECTS-MEDIA
+\*------------------------------------*/
+
+.c-media {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0 0 $spacing 0;
+
+  &--small-spacing {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.c-media--image {
+  display: inline-block;
+  width: 100%;
+
+  &--auto {
+    img {
+      width: auto;
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  figcaption {
+    color: $color-neutral-50;
+  }
+}
+
+/*figure*/.c-media--video {
+  height: 0;
+  padding-bottom: 56%;
+  position: relative;
+  width: 100%;
+
+  iframe,
+  object {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

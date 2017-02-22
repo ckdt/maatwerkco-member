@@ -1,0 +1,99 @@
+/*------------------------------------*\
+  #SETTINGS-GLOBAL
+\*------------------------------------*/
+
+/*
+ * Most of the variables are based on some kind of percentages to maintain stability and consistency.
+ * So $variable-10 is small or light and $variable-100 is big or dark.
+ */
+
+
+
+/*
+ * Set your font
+ */
+$font-family-body: 'Buenos Aires', sans-serif;
+$font-family-serif: 'Libre Baskerville', serif;
+$font-family-heading: 'Buenos Aires', sans-serif;
+$font-family-time: 'GT Pressura';
+
+
+/*
+ * Set your font size
+ */
+$font-size-base: 100%;
+
+$font-size-10: 11px;
+$font-size-20: 12px;
+$font-size-30: 14px;
+$font-size-40: 16px;
+$font-size-50: 18px;
+$font-size-60: 20px;
+$font-size-70: 22px;
+$font-size-80: 24px;
+$font-size-90: 28px;
+$font-size-100: 36px;
+
+/*
+ * Grid columns and grid gutter used in tools.grid, 48 columns is standard
+ */
+$grid-columns: 48;
+$grid-gutter: 1;
+
+
+/*
+ * Maximum width of the website
+ */
+$max-width: 1280px;
+
+
+/*
+ * Default spacing for margin-bottom and other paddings
+ */
+
+$spacing: 20px;
+
+
+/*
+ * Adjust the border-radius
+ */
+$border-radius-10: 2px;
+$border-radius-20: 4px;
+
+
+/*
+ * Media queries
+ */
+$breakpoint-10: 600px;
+$breakpoint-20: 750px;
+$breakpoint-30: 1000px;
+$breakpoint-40: 1200px;
+$breakpoint-50: 1680px;
+
+
+/*
+ * Z-index plan
+ */
+$z-index-10: 10;
+$z-index-20: 20;
+$z-index-30: 30;
+$z-index-40: 40;
+
+
+/*
+ * Shadows
+ */
+$shadow-10: 0 1px 2px rgba($color-black, 0.15);
+$shadow-20: 0 1px 4px rgba($color-black, 0.2);
+
+
+
+/*
+ * Animation beziers
+ */
+$bezier-a: cubic-bezier(.19,1,.22,1);
+
+$timing-10: 0.2s;
+$timing-20: 0.4s;
+
+$sidebar: 350px;

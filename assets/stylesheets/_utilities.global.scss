@@ -1,0 +1,40 @@
+/*------------------------------------*\
+  #UTILITIES-GLOBAL
+\*------------------------------------*/
+
+.u-hidden { display: none !important; }
+
+.u-invisible { visibility: hidden !important; }
+
+.u-text-left { text-align: left; }
+
+.u-text-right { text-align: right; }
+
+.u-text-center { text-align: center; }
+
+.u-float-left { float: left; }
+
+.u-float-right { float: right; }
+
+.u-no-spacing { margin: 0; }
+
+
+.u-visible-mobile {
+  display: block;
+
+  @media (min-width: $breakpoint-10) {
+    display: none;
+  }
+}
+
+.u-visble-tablet-desktop {
+  display: none;
+
+  @media (min-width: $breakpoint-10) {
+    display: block;
+  }
+}
+
+.u-no-pointer-events {
+  pointer-events: none;
+}

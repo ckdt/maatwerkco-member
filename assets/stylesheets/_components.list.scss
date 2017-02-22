@@ -1,0 +1,73 @@
+$block: 'c-list';
+.#{$block} {
+  list-style: none;
+  margin: $spacing/4 0 $spacing 0;
+
+  &--usp {
+
+    @media (min-width: $breakpoint-10) {
+      margin-bottom: $spacing*2;
+    }
+
+    .#{$block}__item {
+      padding-left: $spacing/2*3;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &--archive {
+
+    @media (min-width: $breakpoint-10) {
+      margin-bottom: $spacing*2;
+    }
+
+    .#{$block}__item {
+      padding-left: $spacing/2*3;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+  
+  &__item {
+    padding: $spacing/5 0 $spacing/5 $spacing;
+    position: relative;
+
+    &:before {
+      background: $color-primary-50;
+      border-radius: 100%;
+      content: " ";
+      height: 4px;
+      left: 0rem;
+      position: absolute;
+      top: 15px;
+      width: 4px;
+    }
+  }
+
+  &__link {
+    color: $color-neutral-50;
+  }
+
+  &__icon {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 0;
+  }
+
+}
+
+ol.c-list {
+
+  /*li*/.c-list__item {
+    counter-increment: list__counter;
+
+    &:before {
+      content: counter(list__counter)".";
+    }
+  }
+}

@@ -1,0 +1,69 @@
+/*------------------------------------*\
+  #OBJECTS-LABELS
+\*------------------------------------*/
+
+%c-label {
+  border-radius: $border-radius-10;
+  font-size: $font-size-20;
+  font-weight: bold;
+  padding: 0 4px 2px 4px;
+  line-height: 1;
+}
+
+.c-label {
+  @extend %c-label;
+  background: linear-gradient(180deg, $color-secondary-50, $color-secondary-70);
+  color: $color-neutral-70;
+  text-shadow: 0 1px 0 rgba($color-white, 0.2);
+}
+
+.c-label--neutral {
+  @extend %c-label;
+  background: $color-white;
+  border: 1px solid $color-neutral-30;
+  color: $color-neutral-70;
+
+  .c-icon {
+    fill: $color-neutral-70;
+  }
+}
+
+.c-label--success {
+  @extend %c-label;
+  background: $color-success-50;
+  color: $color-white;
+
+  .c-icon {
+    fill: $color-white;
+  }
+}
+
+.c-label--alert {
+  @extend %c-label;
+  background:  $color-alert-50;
+  color: $color-white;
+
+  .c-icon {
+    fill: $color-white;
+  }
+}
+
+.c-label--warning {
+  @extend %c-label;
+  background: $color-warning-50;
+  color: $color-white;
+
+  .c-icon {
+    fill: $color-white;
+  }
+}
+
+.c-labels {
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+
+  &__item {
+    display: inline-block;
+  }
+}

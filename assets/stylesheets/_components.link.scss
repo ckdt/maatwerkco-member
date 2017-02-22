@@ -1,0 +1,22 @@
+$block: 'c-link';
+.#{$block} {
+  font-family: $font-family-heading;
+  transition: color $timing-10;
+  font-weight: normal;
+
+  &--neutral {
+    color: $color-neutral-70;
+
+    &:hover {
+      color: $color-primary-50;
+    }
+  }
+
+  &--tint {
+    color: $color-secondary-50;
+
+    &:hover {
+      color: $color-secondary-70;
+    }
+  }
+}

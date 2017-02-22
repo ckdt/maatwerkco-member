@@ -1,0 +1,25 @@
+$block: 'c-logo';
+.#{$block} {
+  color: $color-neutral-40;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-family: $font-family-heading;
+  margin-bottom: $spacing;
+  line-height: 1;
+
+  &__description {
+    font-size: $font-size-20;
+    margin-bottom: 0;
+  }
+
+  &__text {
+    font-size: $font-size-100;
+  }
+
+  &__figure {
+    fill: $color-neutral-40;
+    width: 100px;
+    height: 30px;
+  }
+}

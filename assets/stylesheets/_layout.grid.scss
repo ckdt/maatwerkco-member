@@ -1,0 +1,152 @@
+$grid-spacing-10: (
+  padding-x: 10px,
+  padding-y: 10px,
+  padding-outer-x: 10px,
+  padding-outer-y: 20px
+);
+
+$grid-spacing-20: ( 
+  padding-x: 10px,
+  padding-y: 20px,
+  padding-outer-x: 20px,
+  padding-outer-y: 40px
+);
+
+$grid-spacing-30: ( 
+  padding-x: 20px,
+  padding-y: 30px,
+  padding-outer-x: 30px,
+  padding-outer-y: 60px
+);
+
+
+// Generate Default CSS Rules
+@include layout($grid-spacing-10);
+
+@media (min-width: $breakpoint-10) {
+  @include layout($grid-spacing-20);
+}
+
+@media (min-width: $breakpoint-30) {
+  @include layout($grid-spacing-30);
+}
+
+.l-main {
+  flex: 1 0 auto;
+  min-height: 100%;
+  min-height: 80vh;
+
+  @-moz-document url-prefix() {
+     min-height: auto;
+  }
+}
+
+.l-single {
+  margin: auto;
+  max-width: 700px;
+
+  &--wide {
+    max-width: 900px;
+  }
+
+  &--small {
+    max-width: 550px;
+  }
+}
+
+
+.l-1 {
+  flex: 1 100%;
+
+  @media (min-width: $breakpoint-10) {
+    flex: 1 percentage(1/12);
+  }
+}
+
+.l-2 {
+  flex: 1 100%;
+
+  @media (min-width: $breakpoint-10) {
+    flex: 1 percentage(2/12);
+  }
+}
+
+.l-3 {
+  flex: 1 100%;
+
+  @media (min-width: $breakpoint-10) {
+    flex: 1 percentage(3/12);
+  }
+
+  &--not-repons {
+    flex: 1 percentage(3/12);
+  }
+}
+
+.l-4 {
+  flex: 1 100%;
+
+  @media (min-width: $breakpoint-10) {
+    flex: 1 percentage(4/12);
+  }
+}
+
+.l-5 {
+  flex: 1 100%;
+
+  @media (min-width: $breakpoint-10) {
+    flex: 1 percentage(5/12);
+  }
+}
+
+.l-6 {
+  flex: 1 100%;
+
+  @media (min-width: $breakpoint-10) {
+    flex: 1 percentage(6/12);
+  }
+}
+
+.l-7 {
+  flex: 1 100%;
+
+  @media (min-width: $breakpoint-10) {
+    flex: 1 percentage(7/12);
+  }
+}
+
+.l-8 {
+  flex: 1 100%;
+
+  @media (min-width: $breakpoint-10) {
+    flex: 1 percentage(8/12);
+  }
+}
+
+.l-9 {
+  flex: 1 100%;
+
+  @media (min-width: $breakpoint-10) {
+    flex: 1 percentage(9/12);
+  }
+
+  &--not-repons {
+    flex: 1 percentage(9/12);
+  }
+}
+
+.l-flex {
+  display: flex;
+}
+
+.l-row {
+  flex-flow: row wrap;
+}
+
+.l-col {
+  flex-flow: column wrap;
+}
+
+.l-align-center {
+  align-items: center;
+}

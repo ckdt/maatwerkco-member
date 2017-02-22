@@ -1,0 +1,35 @@
+$block: 'c-skewed';
+.#{$block} {
+  $height: 400px;
+
+  background-size: 100%;
+  background: $color-secondary-50  url(../images/pattern.svg);
+  bottom: -$height/5;
+  height: $height/3;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  transform: skew(0deg, -10deg);
+  z-index: -1;
+
+  @media (min-width: $breakpoint-10) {
+    height: $height/2.5;
+  }
+
+  @media (min-width: $breakpoint-20) {
+    bottom: -$height/2;
+    height: $height/1.4;
+  }
+
+  @media (min-width: $breakpoint-30) {
+    bottom: -$height/1.4;
+    height: $height;
+  }
+
+  @media (min-width: $breakpoint-40) {
+    bottom: -$height/2;
+    height: $height;
+  }
+}

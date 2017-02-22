@@ -1,0 +1,32 @@
+/*------------------------------------*\
+  #OBJECTS-ICONS
+\*------------------------------------*/
+
+.c-icon {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  display: inline-block;
+  top: 2px;
+
+  &--small {
+    height: 12px;
+    width: 12px;
+  }
+
+  &--medium {
+    height: 20px;
+    width: 20px;
+  }
+
+  &--large {
+    height: 32px;
+    width: 32px;
+  }
+}
+
+/*svg*/.c-icon--inline {
+  position: relative;
+  top: 0.35rem;
+  margin: 0 0.5rem;
+}

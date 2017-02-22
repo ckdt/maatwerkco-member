@@ -1,0 +1,19 @@
+$block: 'c-page-header';
+.#{$block} {
+  @include grid-container;
+  border-bottom: 1px solid $color-neutral-30;
+  position: relative;
+  display: block;
+  padding-bottom: $spacing/2;
+  max-width: 600px;
+
+  &__title {
+    vertical-align: baseline;
+    display: inline-block;
+    margin-bottom: 0;
+    position: relative;
+    top: 5px;
+  }
+
+  
+}

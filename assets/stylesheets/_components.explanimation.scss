@@ -1,0 +1,15 @@
+.c-explanimation {
+  $size: 400px;
+
+  margin-bottom: $spacing;
+  max-width: $size;
+
+  @media (min-width: $breakpoint-10) {
+    margin-left: $spacing*2;
+  }
+
+  @media (min-width: $breakpoint-30) {
+
+    margin-left: $spacing*5;
+  }
+}

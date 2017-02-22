@@ -1,0 +1,36 @@
+.c-profile-specs {
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap;
+  top: $spacing;
+  right: $spacing;
+
+  @media (min-width: $breakpoint-10) {
+    position: absolute;
+    max-width: 200px;
+  }
+
+  &__item {
+    flex: 1;
+    display: inline-block;
+    margin-bottom: $spacing / 2;
+
+    &--button {
+      flex: 1 100%;
+    }
+  }
+
+  &__amount {
+    font-size: $font-size-100;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  &__desciption {
+    font-size: $font-size-30;
+  }
+
+  &__button {
+    display: block;
+  }
+}

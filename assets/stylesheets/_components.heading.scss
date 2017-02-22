@@ -1,0 +1,51 @@
+.c-heading {
+  color: $color-secondary-70;
+  position: relative;
+  font-family: $font-family-heading;
+  font-weight: normal;
+
+  &--bold {
+    font-weight: bold;
+  }
+
+  &--10 {
+    font-size: $font-size-30;
+  }
+
+  &--30 {
+    font-size: $font-size-40;
+  }
+
+  &--50 {
+    font-size: $font-size-50;
+
+    @media (min-width: $breakpoint-20) {
+      font-size: $font-size-70;
+    }
+  }
+
+  &--70 {
+    font-size: $font-size-90;
+  }
+
+  &--100 {
+    font-size: $font-size-60;
+    line-height: 1.125;
+
+    @media (min-width: $breakpoint-20) {
+      font-size: $font-size-80;
+    }
+
+    @media (min-width: $breakpoint-30) {
+      font-size: $font-size-100;
+    }
+  }
+
+  &--tint {
+    color: $color-secondary-60;
+  }
+
+  &--spacing {
+    margin-bottom: $spacing*2;
+  }
+}
